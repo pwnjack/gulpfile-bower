@@ -17,7 +17,7 @@ Once defined the packages you want to be imported in the "public" folder, be sur
 
 	bower install packagename
 
-Remember to check if the downloaded package have a bower.json file, check if there the "main" file is defined, if not define it with the override parameter in the bower.json of your project's root folder (this).
+Remember to check if the downloaded package have a bower.json file, check if there the "main" file is defined, if not define it with the override parameter in the bower.json of your project's root folder.
 
 When you are done, simply open the terminal move to this project folder and run:
 
