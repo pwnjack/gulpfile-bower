@@ -2,6 +2,7 @@
     "name": "my-project",
     "version": "0.0.1",
     "ignore": [
+        "**/*.md",
         "**/*.txt",
         "bower_components",
         "node_modules",
@@ -12,7 +13,6 @@
   "dependencies": {
         "bootstrap": "*",
         "modernizr": "*",
-        "jquery-prettyPhoto": "*",
         "mixitup": "*",
         "jquery.stellar": "*",
         "magnific-popup": "*"
@@ -20,9 +20,6 @@
     "overrides": {
         "modernizr": {
             "main": "modernizr.js"
-        },
-        "jquery-prettyPhoto": {
-            "main": "*/jquery.prettyPhoto.js"
         },
         "mixitup": {
             "main": "*/jquery.mixitup.js"

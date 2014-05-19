@@ -95,21 +95,6 @@ gulp.task('vendor-fonts', function() {
 	.pipe(gulp.dest(dest_path + '/fonts'))
 });
 
-// grab prettyPhoto img files from bower_components and push in /public
-gulp.task('pp-img', function() {
-	gulp.src('bower_components/**/images/prettyPhoto/**/*.*', {base: 'bower_components/jquery-prettyPhoto/images'})
-	.pipe(gulp.dest(dest_path + '/img'))
-});
-
-// grab prettyPhoto css files from bower_components and push in /public
-gulp.task('pp-css', function() {
-	gulp.src('bower_components/jquery-prettyPhoto/css/*.css')
-	.pipe(gulp.dest(dest_path + '/css'))
-});
-
-// define prettyPhoto task
-gulp.task('prettyPhoto', ['pp-css', 'pp-img']);
-
 // watch task
 gulp.task('watch', function() {
  
@@ -142,4 +127,4 @@ gulp.task('clean', function() {
 });
 
 // define gulp's default task
-gulp.task('default', ['clean', 'files', 'styles', 'scripts', 'images', 'vendor-js', 'vendor-css', 'vendor-fonts', 'prettyPhoto', 'watch']);
+gulp.task('default', ['clean', 'files', 'styles', 'scripts', 'images', 'vendor-js', 'vendor-css', 'vendor-fonts', 'watch']);
