@@ -56,7 +56,7 @@ gulp.task('scripts', function(){
 
 // Images optimization, if cached skip
 gulp.task('images', function() {
-  return gulp.src(src_path + '/images/**/*')
+  	return gulp.src(src_path + '/images/**/*')
   	.pipe(newer('public/img'))
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
     .pipe(gulp.dest(dest_path + '/img'))
@@ -137,7 +137,7 @@ gulp.task('watch', function() {
 
 // clean /public folder subfolders
 gulp.task('clean', function() {
-  return gulp.src([dest_path], {read: false})
+  	return gulp.src([dest_path], {read: false})
     .pipe(clean());
 });
 
