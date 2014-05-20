@@ -70,7 +70,7 @@ This is a list of specific tasks you can use individually when needed.
 
     gulp clean
 
-This will delete completely the /public folder and all it's contents without asking for a confirm
+This will delete completely the /public folder and all it's contents without asking for a confirm.
 
     gulp watch 
 
