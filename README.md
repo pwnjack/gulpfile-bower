@@ -33,7 +33,7 @@ At this point you need to install the packages/libraries you need for your curre
 
     bower install magnific-popup
 
-When you are done choosing and downloading your packages, simply set them as dependencies in you bower.json file (see the example file for reference).
+When you are done choosing and downloading your packages, simply set them as dependencies in your bower.json file (see the example file for reference).
 
 Then define your project's libraries and dependencies inside the bower.json file (I wrote some example libraries, obviously feel free to add your own). If your desired package haven't a dedicated bower.json file create one or you can use the "overrides" parameter in your bower.json file to tell the program which file to grab as "main" (like I did with "modernizr.js" and some other examples).
 
