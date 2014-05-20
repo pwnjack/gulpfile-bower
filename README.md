@@ -5,7 +5,7 @@ This is a gulp/bower working environment to develop a frontend website from scra
 
 The author is @pwnjack
 
-Dependencies: Bower, GulpJS
+Dependencies: NodeJS, Bower, GulpJS
 
 
 Get Started
@@ -34,8 +34,9 @@ At this point you need to install the packages/libraries you need for your curre
     bower install magnific-popup
 
 When you are done choosing and downloading your packages, simply set them as dependencies in your bower.json file (see the example file for reference).
+I wrote some example libraries, obviously feel free to add your own.
 
-Then define your project's libraries and dependencies inside the bower.json file (I wrote some example libraries, obviously feel free to add your own). If your desired package haven't a dedicated bower.json file create one or you can use the "overrides" parameter in your bower.json file to tell the program which file to grab as "main" (like I did with "modernizr.js" and some other examples).
+If your desired package haven't a dedicated bower.json file create one or you can use the "overrides" parameter in your bower.json file to tell the program which file to grab as "main" (like I did with "modernizr.js" and some other examples).
 
 Now your environment is ready.
 
@@ -43,9 +44,9 @@ Don't worry you have to do this just the first time, for the next projects you w
 
 
 Usage
-=======
+=====
 
-When you are done with the installation part simply open the terminal, move to your project's folder and run:
+When you are done with the installation simply open the terminal, move to your project's folder and run:
 
     gulp
 
@@ -54,9 +55,23 @@ The program will iterate trough the gulpfile.js and run every defined task.
 It will:
 
 - Copy components' main files (js/css/img/fonts) to the production folder (/public/**).
+- Copy all files (*.*) in the src root folder, validate *.html files (throwing errors in the terminal), and push all files in the public root folder.
 - Compile your custom scripts/styles (less/js), concatenate, auto vendor-prefix, optimize, minimize and push them to production folder.
 - Start the watch task that will automatically update your production (/public) files whenever you do any change to a development (/src) file.
 
 So you can simply work on /src and keep your project's /public/*.html open in your favorite browser to see the results.
 
 Done. Good coding!
+
+Commands
+========
+
+This is a list of specific tasks you can use individually when needed.
+
+    gulp clean
+
+This will delete completely the /public folder and all it's contents without asking for a confirm
+
+    gulp watch 
+
+When you have to get back to work on your project after you restarted your computer, or after the terminal throwed an error and interrupted the initial watch task, run it again with this command.

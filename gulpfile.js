@@ -24,15 +24,19 @@ var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 var newer = require('gulp-newer');
 var clean = require('gulp-clean');
+var w3cjs = require('gulp-w3cjs');
 
 // Define paths variables
 var src_path = 'src';
 var dest_path =  'public';
 
-// Copy html from src and and push inside /public
+// Copy all files from /src, validate html files, and and push everything inside /public
 gulp.task('files', function() {
 	return gulp.src(src_path + '/*.*')
 	.pipe(newer(dest_path))
+	.pipe(filter('*.html'))
+	.pipe(w3cjs())
+	.pipe(filter('*.html').restore())
 	.pipe(gulp.dest(dest_path))
 	.pipe(notify("<%= file.relative %> pushed"));
 });
