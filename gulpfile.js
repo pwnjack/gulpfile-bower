@@ -17,6 +17,7 @@ var bowerSrc = require('gulp-bower-src');
 var flatten = require('gulp-flatten');
 var filter = require('gulp-filter');
 var uglify = require('gulp-uglify');
+var minifycss = require('gulp-minify-css');
 var notify = require('gulp-notify');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');

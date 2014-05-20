@@ -52,7 +52,7 @@ describe('gulp-minify-css minification', function() {
       }));
     });
 
-    it('should return file.contents as a buffer', function(done) {
+    it('should return file.contents as a stream', function(done) {
       gulp.src(filename, {buffer: false})
       .pipe(minifyCSS(opts))
       .pipe(es.map(function(file) {
