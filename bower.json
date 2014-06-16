@@ -15,7 +15,8 @@
         "modernizr": "*",
         "mixitup": "*",
         "jquery.stellar": "*",
-        "magnific-popup": "*"
+        "magnific-popup": "*",
+        "font-awesome": "*"
     },
     "overrides": {
         "modernizr": {
