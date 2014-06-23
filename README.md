@@ -69,7 +69,8 @@ If you have a version mismatch from your gulp global install and the local one i
 
     sudo npm install gulp
     
-again, so it will update to the latest gulp version
+again, so it will update to the latest gulp version.
+
 
 Commands
 ========
