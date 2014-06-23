@@ -7,6 +7,8 @@ The author is @pwnjack
 
 Dependencies: NodeJS, Bower, GulpJS
 
+Other dependencies: git CLI (for the first setup)
+
 
 Get Started
 ===========
@@ -19,7 +21,7 @@ Then install Gulp and Bower globally via NPM:
 
     npm install bower -g
 
-Then move to the desired folder and clone this Git and use it as a starting point for your project:
+Add sudo if needed, then move to the desired folder and clone this Git and use it as a starting point for your project:
     
     cd /myproject
 
@@ -62,6 +64,12 @@ It will:
 So you can simply work on /src and keep your project's /public/*.html open in your favorite browser to see the results.
 
 Done. Good coding!
+
+If you have a version mismatch from your gulp global install and the local one inside the project, simply run
+
+    npm install gulp
+    
+again, so it will update to the latest gulp version
 
 Commands
 ========
