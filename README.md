@@ -17,11 +17,11 @@ You need Node installed.
 
 Then install Gulp and Bower globally via NPM:
 
-    npm install gulp -g
+    sudo npm install gulp -g
 
-    npm install bower -g
+    sudo npm install bower -g
 
-Add sudo if needed, then move to the desired folder and clone this Git and use it as a starting point for your project:
+Then move to the desired folder and clone this Git and use it as a starting point for your project:
     
     cd /myproject
 
@@ -67,7 +67,7 @@ Done. Good coding!
 
 If you have a version mismatch from your gulp global install and the local one inside the project, simply run
 
-    npm install gulp
+    sudo npm install gulp
     
 again, so it will update to the latest gulp version
 
