@@ -35,14 +35,19 @@ At this point you need to install the packages/libraries you need for your curre
 
     bower install magnific-popup
 
-When you are done choosing and downloading your packages, simply set them as dependencies in your bower.json file (see the example file for reference).
+You can set them as dependencies in your bower.json file by adding the --save-dev option, so for shorthand, for you next similar projects, you can simply run instead:
+
+    bower install
+
+It will automatically install all packages defined in the bower.json file.
+
 I wrote some example libraries, obviously feel free to add your own.
 
-If your desired package haven't a dedicated bower.json file create one or you can use the "overrides" parameter in your bower.json file to tell the program which file to grab as "main" (like I did with "modernizr.js" and some other examples).
+If your desired package is not bower-ready and haven't an auto-generated bower.json file, you can use the "overrides" parameter in your bower.json file, (You can see some override examples directly in the bower.json file).
 
-Now your environment is ready.
+Well, now your environment is ready.
 
-Don't worry you have to do this just the first time, for the next projects you will use the same template and skip this tedious "Get Started" step.
+Don't worry you have to do this just the first time, for the next projects you could use the same template and skip this tedious "Get Started" step.
 
 
 Usage
@@ -70,6 +75,26 @@ If you have a version mismatch from your gulp global install and the local one i
     sudo npm install gulp
     
 again, so it will update to the latest gulp version.
+
+
+Setup
+=====
+
+Install your Bower packages, it's as simple as:
+
+    bower install bootstrap
+
+and if you want to add the package to the bower.json dependencies use the --save option, like this;
+
+    bower install bootstrap --save
+
+This way, it will be added into the bower.json dependencies of your project.
+
+If you want to re-use your bower.json for another project with similar packages, you can re-download all of them if they are set as dependencies, with this command:
+
+    bower install
+
+Bower will iterate trough the bower.json file and download all the dependencies.
 
 
 Commands

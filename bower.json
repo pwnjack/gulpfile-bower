@@ -1,29 +1,29 @@
 {
-    "name": "my-project",
-    "version": "0.0.1",
-    "ignore": [
-        "**/*.md",
-        "**/*.txt",
-        "bower_components",
-        "node_modules",
-        "src",
-        "gulpfile.js",
-        "*.json"
+  "name": "my-project",
+  "version": "0.0.1",
+  "ignore": [
+    "**/*.md",
+    "**/*.txt",
+    "bower_components",
+    "node_modules",
+    "src",
+    "gulpfile.js",
+    "*.json"
   ],
   "dependencies": {
-        "bootstrap": "*",
-        "modernizr": "*",
-        "mixitup": "*",
-        "jquery.stellar": "*",
-        "magnific-popup": "*",
-        "font-awesome": "*"
+    "bootstrap": "*",
+    "modernizr": "*",
+    "mixitup": "*",
+    "jquery.stellar": "*",
+    "magnific-popup": "*",
+    "font-awesome": "*"
+  },
+  "overrides": {
+    "modernizr": {
+      "main": "modernizr.js"
     },
-    "overrides": {
-        "modernizr": {
-            "main": "modernizr.js"
-        },
-        "mixitup": {
-            "main": "*/jquery.mixitup.js"
-        }
+    "mixitup": {
+      "main": "*/jquery.mixitup.js"
     }
+  }
 }
