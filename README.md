@@ -76,6 +76,10 @@ If you have a version mismatch from your gulp global install and the local one i
     
 again, so it will update to the latest gulp version.
 
+For now error handling is not in the scope of the project, so if you get one just run
+
+    gulp watch
+
 
 Setup
 =====
