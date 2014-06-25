@@ -23,11 +23,13 @@ Then install Gulp and Bower globally via NPM:
 
 Then move to the desired folder and clone this Git and use it as a starting point for your project:
     
-    cd /myproject
-
     git clone https://github.com/pwnjack/gulpfile-bower.git
 
-This will install all the needed gulp plugins defined in the first part of the [gulpfile](/gulpfile.js).
+    cd /gulpfile-bower
+
+    npm install
+
+This last command will lookup at the [package.json](/package.json) file and install all the needed gulp plugins defined in the first part of the [gulpfile](/gulpfile.js).
 
 
 Setup
@@ -39,7 +41,7 @@ At this point you have to choose what packages to install, based on what you nee
 
     bower install magnific-popup
 
-If you want you can set them as dependencies in your bower.json file by adding the --save-dev option, so for you next similar projects, you can instead run:
+If you want you can set them as dependencies in your bower.json file by adding the --save-dev option, so for you next similar projects, you can use this bower.json and instead run just:
 
     bower install
 
@@ -64,7 +66,7 @@ The program will iterate trough the gulpfile.js and run every defined task.
 
 It will:
 
-- Copy bower_components' main files (js/css/img/fonts) to the production folder (/public/**).
+- Copy Bower Components' main files (js/css/img/fonts) to the production folder (/public/**).
 - Copy all files from the /src root folder, validate *.html files (throwing errors in the terminal), and push all files to the /public folder.
 - Compile your custom scripts/styles (less/js), concatenate, auto vendor-prefix, minimize, optimize images and push everything to production folder.
 - Start the watch task that will automatically update your production (/public) files whenever you do any change to a development (/src) file.
