@@ -45,7 +45,7 @@ If you want you can set them as dependencies in your bower.json file by adding t
 It will automatically install all the packages you previously added in your [bower.json](/bower.json) file.
 I added some sample libraries, of course feel free to add your own.
 
-If your desired package is not bower-ready and has not an auto-generated bower.json file, you can use the "overrides" parameter in *your* project's bower.json file to define the "main" production file for that package. (You can see some overrides samples I did in the bower.json file).
+If your desired package is not bower-ready and has not an auto-generated bower.json file, you can use the "overrides" parameter in your project's bower.json file to define the "main" production file for that package. (You can see some overrides samples I did in the bower.json file).
 
 Well, now your environment is ready.
 
