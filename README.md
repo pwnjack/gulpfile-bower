@@ -72,7 +72,7 @@ So you can simply work on /src files and keep your project's /public/*.html open
 Done. Good coding!
 
 
-### Errors
+## Errors
 
 For now error handling is not in the scope of the project, so if you get one and the process hangs just run
 
@@ -85,6 +85,9 @@ If you have an error of version mismatch from your gulp global install and the l
     sudo npm install gulp
     
 It will update the local installation of gulp to the latest version.
+
+
+If you have any suggestion or optimization feel free to submit a pull request or open an issue, I like feedback.
 
 
 ## Commands
