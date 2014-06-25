@@ -1,0 +1,9 @@
+# Production folder
+public/
+
+# Components folders
+node_modules/
+bower_components/
+
+# OSX files
+.DS_Store
