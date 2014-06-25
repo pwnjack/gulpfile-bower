@@ -31,7 +31,7 @@ var w3cjs = require('gulp-w3cjs');
 var src_path = 'src';
 var dest_path =  'public';
 
-// Copy all files from /src, validate html files, and and push everything inside /public
+// Copy all files from /src, and push them inside /public
 gulp.task('files', function() {
 	return gulp.src(src_path + '/*.*')
 	.pipe(newer(dest_path))
