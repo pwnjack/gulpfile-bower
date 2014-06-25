@@ -1,5 +1,4 @@
-gulpfile-bower
-==============
+# gulpfile-bower
 
 This is a gulp/bower working environment to develop a frontend website from scratch.
 
@@ -10,8 +9,7 @@ Dependencies: NodeJS, Bower, GulpJS
 Other dependencies: git CLI (for the first setup)
 
 
-Get Started
-===========
+## Get Started
 
 You need NodeJS installed, download it from their [official website](http://nodejs.org/).
 
@@ -32,8 +30,7 @@ Then move to the desired folder and clone this Git and use it as a starting poin
 This last command will lookup at the [package.json](/package.json) file and install all the needed gulp plugins defined in the first part of the [gulpfile](/gulpfile.js).
 
 
-Setup
-=====
+## Setup
 
 At this point you have to choose what packages to install, based on what you need for your current project, you can do it using Bower like this (example):
 
@@ -48,15 +45,14 @@ If you want you can set them as dependencies in your bower.json file by adding t
 It will automatically install all the packages you previously added in your [bower.json](/bower.json) file.
 I added some sample libraries, of course feel free to add your own.
 
-If your desired package is not bower-ready and has not an auto-generated bower.json file, you can use the "overrides" parameter in your project's bower.json file to define the "main" production file for that package. (You can see some overrides samples I did in the bower.json file).
+If your desired package is not bower-ready and has not an auto-generated bower.json file, you can use the "overrides" parameter in *your* project's bower.json file to define the "main" production file for that package. (You can see some overrides samples I did in the bower.json file).
 
 Well, now your environment is ready.
 
 Don't worry you have to do this just the first time, for the next projects you could use the same template and skip this tedious "Setup" step.
 
 
-Usage
-=====
+## Usage
 
 When you are done with the installation open the terminal, move to your project's folder and run:
 
@@ -75,8 +71,8 @@ So you can simply work on /src files and keep your project's /public/*.html open
 
 Done. Good coding!
 
-Errors
-------
+
+### Errors
 
 For now error handling is not in the scope of the project, so if you get one and the process hangs just run
 
@@ -91,8 +87,7 @@ If you have an error of version mismatch from your gulp global install and the l
 It will update the local installation of gulp to the latest version.
 
 
-Commands
-========
+## Commands
 
 This is a list of specific tasks you can use individually when needed.
 
