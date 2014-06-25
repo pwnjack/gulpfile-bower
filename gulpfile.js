@@ -35,11 +35,17 @@ var dest_path =  'public';
 gulp.task('files', function() {
 	return gulp.src(src_path + '/*.*')
 	.pipe(newer(dest_path))
-	.pipe(filter('*.html'))
-	.pipe(w3cjs())
-	.pipe(filter('*.html').restore())
 	.pipe(gulp.dest(dest_path))
 	.pipe(notify("<%= file.relative %> pushed"));
+});
+
+// Validate html files, and and push them in /public
+gulp.task('html', function() {
+	return gulp.src(src_path + '/*.html')
+	.pipe(newer(dest_path))
+	.pipe(w3cjs())
+	.pipe(gulp.dest(dest_path))
+	.pipe(notify("<%= file.relative %> validated and pushed"));
 });
 
 // Compile less files in css, autoprefix them and notify when done. Ignore responsive.less because it's imported in style.less
@@ -133,4 +139,4 @@ gulp.task('clean', function() {
 });
 
 // configure gulp's default task to run everything
-gulp.task('default', ['clean', 'files', 'styles', 'scripts', 'images', 'vendor-js', 'vendor-css', 'vendor-fonts', 'watch']);
+gulp.task('default', ['clean', 'files', 'html', 'styles', 'scripts', 'images', 'vendor-js', 'vendor-css', 'vendor-fonts', 'watch']);
