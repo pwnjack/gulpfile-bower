@@ -13,7 +13,7 @@ Other dependencies: git CLI (for the first setup)
 Get Started
 ===========
 
-You need NodeJS installed, download it from the [official website](http://nodejs.org/).
+You need NodeJS installed, download it from their [official website](http://nodejs.org/).
 
 Then install Gulp and Bower globally via NPM:
 
@@ -27,7 +27,7 @@ Then move to the desired folder and clone this Git and use it as a starting poin
 
     git clone https://github.com/pwnjack/gulpfile-bower.git
 
-This will install all the needed gulp plugins defined in the first part of the gulpfile.
+This will install all the needed gulp plugins defined in the first part of the [gulpfile](/gulpfile.js).
 
 
 Setup
@@ -73,17 +73,20 @@ So you can simply work on /src files and keep your project's /public/*.html open
 
 Done. Good coding!
 
-If you have an error of version mismatch from your gulp global install and the local one inside the project, simply run
-
-    sudo npm install gulp
-    
-It will update the local installation of gulp to the latest version.
+Errors
+------
 
 For now error handling is not in the scope of the project, so if you get one and the process hangs just run
 
     gulp watch
 
 This will re-run just the watch task.
+
+If you have an error of version mismatch from your gulp global install and the local one inside the project, simply run
+
+    sudo npm install gulp
+    
+It will update the local installation of gulp to the latest version.
 
 
 Commands
