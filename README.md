@@ -13,7 +13,7 @@ Other dependencies: git CLI (for the first setup)
 Get Started
 ===========
 
-You need Node installed.
+You need NodeJS installed, download it from the [official website](http://nodejs.org/).
 
 Then install Gulp and Bower globally via NPM:
 
@@ -29,31 +29,34 @@ Then move to the desired folder and clone this Git and use it as a starting poin
 
 This will install all the needed gulp plugins defined in the first part of the gulpfile.
 
-At this point you need to install the packages/libraries you need for your current project from Bower like this (example):
+
+Setup
+=====
+
+At this point you have to choose what packages to install, based on what you need for your current project, you can do it using Bower like this (example):
 
     bower install bootstrap
 
     bower install magnific-popup
 
-You can set them as dependencies in your bower.json file by adding the --save-dev option, so for shorthand, for you next similar projects, you can simply run instead:
+If you want you can set them as dependencies in your bower.json file by adding the --save-dev option, so for you next similar projects, you can instead run:
 
     bower install
 
-It will automatically install all packages defined in the bower.json file.
+It will automatically install all the packages you previously added in your [bower.json](/bower.json) file.
+I added some sample libraries, of course feel free to add your own.
 
-I wrote some example libraries, obviously feel free to add your own.
-
-If your desired package is not bower-ready and haven't an auto-generated bower.json file, you can use the "overrides" parameter in your bower.json file, (You can see some override examples directly in the bower.json file).
+If your desired package is not bower-ready and has not an auto-generated bower.json file, you can use the "overrides" parameter in your project's bower.json file to define the "main" production file for that package. (You can see some overrides samples I did in the bower.json file).
 
 Well, now your environment is ready.
 
-Don't worry you have to do this just the first time, for the next projects you could use the same template and skip this tedious "Get Started" step.
+Don't worry you have to do this just the first time, for the next projects you could use the same template and skip this tedious "Setup" step.
 
 
 Usage
 =====
 
-When you are done with the installation simply open the terminal, move to your project's folder and run:
+When you are done with the installation open the terminal, move to your project's folder and run:
 
     gulp
 
@@ -61,44 +64,26 @@ The program will iterate trough the gulpfile.js and run every defined task.
 
 It will:
 
-- Copy components' main files (js/css/img/fonts) to the production folder (/public/**).
-- Copy all files (*.*) in the src root folder, validate *.html files (throwing errors in the terminal), and push all files in the public root folder.
-- Compile your custom scripts/styles (less/js), concatenate, auto vendor-prefix, optimize, minimize and push them to production folder.
+- Copy bower_components' main files (js/css/img/fonts) to the production folder (/public/**).
+- Copy all files from the /src root folder, validate *.html files (throwing errors in the terminal), and push all files to the /public folder.
+- Compile your custom scripts/styles (less/js), concatenate, auto vendor-prefix, minimize, optimize images and push everything to production folder.
 - Start the watch task that will automatically update your production (/public) files whenever you do any change to a development (/src) file.
 
-So you can simply work on /src and keep your project's /public/*.html open in your favorite browser to see the results.
+So you can simply work on /src files and keep your project's /public/*.html open in your favorite browser to see the results.
 
 Done. Good coding!
 
-If you have a version mismatch from your gulp global install and the local one inside the project, simply run
+If you have an error of version mismatch from your gulp global install and the local one inside the project, simply run
 
     sudo npm install gulp
     
-again, so it will update to the latest gulp version.
+It will update the local installation of gulp to the latest version.
 
-For now error handling is not in the scope of the project, so if you get one just run
+For now error handling is not in the scope of the project, so if you get one and the process hangs just run
 
     gulp watch
 
-
-Setup
-=====
-
-Install your Bower packages, it's as simple as:
-
-    bower install bootstrap
-
-and if you want to add the package to the bower.json dependencies use the --save option, like this;
-
-    bower install bootstrap --save
-
-This way, it will be added into the bower.json dependencies of your project.
-
-If you want to re-use your bower.json for another project with similar packages, you can re-download all of them if they are set as dependencies, with this command:
-
-    bower install
-
-Bower will iterate trough the bower.json file and download all the dependencies.
+This will re-run just the watch task.
 
 
 Commands
@@ -108,8 +93,8 @@ This is a list of specific tasks you can use individually when needed.
 
     gulp clean
 
-This will delete completely the /public folder and all it's contents without asking for a confirm.
+This will delete completely the /public folder and all it's contents without asking for a confirm. Although it won't affect the /src folder, so after cleaning you can always re-run gulp to compile everything again, without loosing any change you did, except if you modified something directly in the public folder, but this is not supposed to happen, because as said, you should work only on the files inside your /src folder.
 
     gulp watch 
 
-When you have to get back to work on your project after you restarted your computer, or after the terminal throwed an error and interrupted the initial watch task, run it again with this command.
+When you have to get back to work on your project after you restarted your computer, or after the terminal throws an error, or for any other reason that may have interrupted the initial watch task, run it again with this command.

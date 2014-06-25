@@ -3,6 +3,7 @@ Gulpfile intended to start a new project from scratch
 The author is @pwnjack
 This file relies on bower
 Remember to define dependencies in bower.json to grab the packages
+See the README.md for detailed informations
 */
 
 // define gulp
@@ -131,5 +132,5 @@ gulp.task('clean', function() {
     .pipe(clean());
 });
 
-// define gulp's default task
+// configure gulp's default task to run everything
 gulp.task('default', ['clean', 'files', 'styles', 'scripts', 'images', 'vendor-js', 'vendor-css', 'vendor-fonts', 'watch']);
