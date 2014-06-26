@@ -1,4 +1,23 @@
-# gulpfile-bower
+#gulpfile-bower
+
+This script use Bower to download packages and Gulp to initiate a task that:
+
+- Copy vendor libraries files (downloaded from Bower) to your production folder (jQuery, Bootstrap, Font Awesome, etc.)
+- Render 'less' in flat 'css' and update it at every file save
+- Watch every file inside the 'source' folder and update the output counterparts in the 'production' folder.
+
+Every file type will be treated in a different way before reaching the output folder:
+
+- LESS will be compiled in CSS (and automagically vendor-prefixed for oldies)
+- JS will be merged and minimized
+- Images will be web optimized
+- HTML files will be W3C validated (validation errors output in Terminal)
+- All other files will simply be copied
+
+Your worfklow will be to work on the 'source' folder and view the 'production' folder in your browser,
+real-time updated at every change, with a fancy notification for Mac users, for Windows you need Growl installed.
+
+## Prepare
 
 This is a gulp/bower working environment to develop a frontend website from scratch.
 
