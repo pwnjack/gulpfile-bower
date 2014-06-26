@@ -1,5 +1,15 @@
 #gulpfile-bower
 
+This is a gulp/bower working environment to develop a frontend website from scratch.
+
+The author is @pwnjack
+
+Dependencies: NodeJS, Bower, GulpJS
+
+Other dependencies: git CLI (for the first setup)
+
+------------
+
 This script use Bower to download packages and Gulp to initiate a task that:
 
 - Copy vendor libraries files (downloaded from Bower) to your production folder (jQuery, Bootstrap, Font Awesome, etc.)
@@ -16,17 +26,6 @@ Every file type will be treated in a different way before reaching the output fo
 
 Your worfklow will be to work on the 'source' folder and view the 'production' folder in your browser,
 real-time updated at every change, with a fancy notification (Pre-Lion and Windows users need Growl installed).
-
-## Prepare
-
-This is a gulp/bower working environment to develop a frontend website from scratch.
-
-The author is @pwnjack
-
-Dependencies: NodeJS, Bower, GulpJS
-
-Other dependencies: git CLI (for the first setup)
-
 
 ## Get Started
 
