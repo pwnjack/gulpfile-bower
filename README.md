@@ -8,7 +8,7 @@ Dependencies: NodeJS, Bower, GulpJS
 
 Other dependencies: git CLI (for the first setup)
 
-___
+
 
 This script use Bower to download packages and Gulp to initiate a task that:
 
