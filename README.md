@@ -1,4 +1,4 @@
-#gulpfile-bower
+# gulpfile-bower
 
 This is a gulp/bower working environment to develop a frontend website from scratch.
 
@@ -8,7 +8,7 @@ Dependencies: NodeJS, Bower, GulpJS
 
 Other dependencies: git CLI (for the first setup)
 
-
+## What it does
 
 This script use Bower to download packages and Gulp to initiate a task that:
 
