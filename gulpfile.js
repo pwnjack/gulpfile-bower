@@ -3,7 +3,7 @@ Gulpfile intended to start a new project from scratch
 The author is @pwnjack
 This file relies on bower
 Remember to define dependencies in bower.json to grab the packages
-See the README.md for detailed informations
+See the README for detailed informations
 */
 
 // define gulp
