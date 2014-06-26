@@ -15,7 +15,7 @@ Every file type will be treated in a different way before reaching the output fo
 - All other files will simply be copied
 
 Your worfklow will be to work on the 'source' folder and view the 'production' folder in your browser,
-real-time updated at every change, with a fancy notification for Mac users, for Windows you need Growl installed.
+real-time updated at every change, with a fancy notification (Pre-Lion and Windows users need Growl installed).
 
 ## Prepare
 
