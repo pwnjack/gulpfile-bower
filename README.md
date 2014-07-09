@@ -92,7 +92,7 @@ Done. Good coding!
 
 ## Errors
 
-For now error handling is not in the scope of the project, so if you get one the script will stop watching you file changes, to start it again run
+For now error handling is not in the scope of the script, so if you get one the process will stop watching your file changes, if this happens, run this to start it again.
 
     gulp watch
 
@@ -119,3 +119,8 @@ This will delete completely the /public folder and all it's contents without ask
     gulp watch 
 
 When you have to get back to work on your project after you restarted your computer, or after the terminal throws an error, or for any other reason that may have interrupted the initial watch task, run it again with this command.
+
+
+## The Gulpfile
+
+This script is all about the gulpfile.js, if you want to customize it, have a look at the [gulpfile.js](/gulpfile.js), it's nicely inline-commented for your pleasure. Go deep and discover the power of [gulp](http://gulpjs.com/) and all the fast growing [plugins list](/http://gulpjs.com/plugins/), just awesome.
