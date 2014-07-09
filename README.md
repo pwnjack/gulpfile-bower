@@ -123,4 +123,4 @@ When you have to get back to work on your project after you restarted your compu
 
 ## The Gulpfile
 
-This script is all about the gulpfile.js, if you want to customize it, have a look at the [gulpfile.js](/gulpfile.js), it's nicely inline-commented for your pleasure. Go deep and discover the power of [gulp](http://gulpjs.com/) and all the fast growing [plugins list](/http://gulpjs.com/plugins/), just awesome.
+This script is all about the gulpfile.js, if you want to customize it, have a look at the [gulpfile.js](/gulpfile.js), it's nicely inline-commented for your pleasure. Go deep and discover the power of [gulp](http://gulpjs.com/) and all the fast growing [plugin list](/http://gulpjs.com/plugins/), just awesome.
