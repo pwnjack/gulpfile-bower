@@ -12,19 +12,19 @@ Other dependencies: git CLI (for the first setup)
 
 This script use Bower to download packages and Gulp to initiate a task that:
 
-- Copy vendor libraries files (downloaded from Bower) to your production folder (jQuery, Bootstrap, Font Awesome, etc.)
+- Copy vendor libraries files (downloaded from Bower) to your production folder (ex. jQuery, Bootstrap, Font Awesome, etc.)
 - Render 'less' in flat 'css' and update it at every file save
-- Watch every file inside the 'source' folder and update the output counterparts in the 'production' folder.
+- Watch every file inside the 'source' folder and update the output counterparts in to the 'production' folder.
 
 Every file type will be treated in a different way before reaching the output folder:
 
 - LESS will be compiled in CSS (and automagically vendor-prefixed for oldies)
 - JS will be merged and minimized
 - Images will be web optimized
-- HTML files will be W3C validated (validation errors output in Terminal)
-- All other files will simply be copied
+- HTML files will be W3C validated (throwing validation errors in to the Terminal)
+- All other files will be just copied
 
-Your worfklow will be to work on the 'source' folder and view the 'production' folder in your browser,
+Your worfklow will be to work on the 'source' folder and view the 'production' folder in your favorite browser,
 real-time updated at every change, with a fancy notification (Pre-Lion and Windows users need Growl installed).
 
 ## Get Started
@@ -56,18 +56,18 @@ At this point you have to choose what packages to install, based on what you nee
 
     bower install magnific-popup
 
-If you want you can set them as dependencies in your bower.json file by adding the --save-dev option, so for you next similar projects, you can use this bower.json and instead run just:
+If you want you can set them as dependencies in your bower.json file by adding the --save option, so for you next similar projects, you can use the same bower.json and instead run just:
 
     bower install
 
-It will automatically install all the packages you previously added in your [bower.json](/bower.json) file.
-I added some sample libraries, of course feel free to add your own.
+And it will automatically install all the packages listed in your bower.json file, including those you have previously added to your [bower.json](/bower.json) file with the --save option.
+I showed some sample libraries, of course add your.
 
-If your desired package is not bower-ready and has not an auto-generated bower.json file, you can use the "overrides" parameter in your project's bower.json file to define the "main" production file for that package. (You can see some overrides samples I did in the bower.json file).
+If your desired package is not bower-ready and has not a properly auto-generated bower.json file, and the script doesn't actually grab the production file, then you can use the "overrides" parameter in your project's bower.json file to define the "main" production file for that package. (You can see some overrides samples I did in the bower.json file).
 
-Well, now your environment is ready.
+Well, now your environment is ready. Let's start the script!
 
-Don't worry you have to do this just the first time, for the next projects you could use the same template and skip this tedious "Setup" step.
+Don't worry you have to do all this just the first time, for the next projects you can skip this tedious "Setup".
 
 
 ## Usage
@@ -92,17 +92,17 @@ Done. Good coding!
 
 ## Errors
 
-For now error handling is not in the scope of the project, so if you get one and the process hangs just run
+For now error handling is not in the scope of the project, so if you get one the script will stop watching you file changes, to start it again run
 
     gulp watch
 
-This will re-run just the watch task.
+This will re-run just the watch task, and a start compiling in the production folder (/public) again.
 
-If you have an error of version mismatch from your gulp global install and the local one inside the project, simply run
+During installation you could have an error of version mismatch from your gulp global installation, differing from the local installation (in your project's folder),in those cases run
 
     sudo npm install gulp
     
-It will update the local installation of gulp to the latest version.
+It will update the local installation of gulp to the latest available version.
 
 
 If you have any suggestion or optimization feel free to submit a pull request or open an issue, I like feedback.
@@ -110,7 +110,7 @@ If you have any suggestion or optimization feel free to submit a pull request or
 
 ## Commands
 
-This is a list of specific tasks you can use individually when needed.
+This is a list of some specific tasks you may use individually if needed.
 
     gulp clean
 
