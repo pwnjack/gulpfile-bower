@@ -3,9 +3,6 @@
     "gulp": "~3.6.0",
     "gulp-less": "~1.2.3",
     "gulp-autoprefixer": "0.0.7",
-    "gulp-bower": "0.0.4",
-    "gulp-bower-files": "~0.2.1",
-    "gulp-bower-src": "0.0.1",
     "gulp-flatten": "0.0.2",
     "gulp-filter": "~0.4.0",
     "gulp-uglify": "~0.2.1",
@@ -16,6 +13,7 @@
     "gulp-concat": "~2.2.0",
     "gulp-imagemin": "~0.5.0",
     "gulp-newer": "~0.3.0",
-    "gulp-w3cjs": "~0.2.0"
+    "gulp-w3cjs": "~0.2.0",
+    "main-bower-files": "~1.0.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "my-project",
-  "version": "0.0.1",
+  "version": "0.1",
   "ignore": [
     "**/*.md",
     "**/*.txt",
@@ -12,18 +12,11 @@
   ],
   "dependencies": {
     "bootstrap": "*",
-    "modernizr": "*",
-    "mixitup": "*",
-    "jquery.stellar": "*",
-    "magnific-popup": "*",
-    "font-awesome": "*"
+    "modernizr": "*"
   },
   "overrides": {
     "modernizr": {
       "main": "modernizr.js"
-    },
-    "mixitup": {
-      "main": "*/jquery.mixitup.js"
     }
   }
 }
