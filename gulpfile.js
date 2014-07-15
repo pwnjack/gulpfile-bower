@@ -52,7 +52,7 @@ gulp.task('styles', function() {
 });
 
 // Compile scripts and push in a single minimized file inside /public/js
-gulp.task('scripts', function(){
+gulp.task('scripts', function() {
 	return gulp.src([src_path + '/scripts/plugins.js', src_path + '/scripts/**/*.js'])
 	.pipe(concat('main.js'))
 	.pipe(gulp.dest(dest_path + '/js'))
