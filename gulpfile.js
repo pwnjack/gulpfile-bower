@@ -128,7 +128,7 @@ gulp.task('watch', function() {
     });
 });
 
-// clean /public folder subfolders
+// clean /public folder
 gulp.task('clean', function() {
   	return gulp.src([dest_path], {read: false})
     .pipe(clean());
