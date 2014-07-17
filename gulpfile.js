@@ -78,7 +78,7 @@ gulp.task('libs', function() {
 
 	var jsFilter = gulpFilter('*.js');
     var cssFilter = gulpFilter('*.css');
-    var fontFilter = gulpFilter('**/fonts/*.*');
+    var fontFilter = gulpFilter(['*.eot', '*.woff', '*.svg', '*.ttf']);
 
 	return gulp.src(mainBowerFiles())
 
