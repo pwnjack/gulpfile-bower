@@ -19,7 +19,7 @@ Once you started the script, all files will be copied from the /src folder to th
 
 ## Getting started
 
-If you don't have them installed, install NodeJS (downloading it from their official website), then install Gulp and Bower globally via npm:
+If you don't have it, install NodeJS [NodeJS](http://nodejs.org), then Gulp and Bower globally via npm:
 
     sudo npm install gulp -g
     
@@ -44,7 +44,7 @@ Install the desired Bower packages (e.g.)
     
 The --save option is needed to save the package name in the bower.json file as a dependency for your project, this is needed to let the script work correctly.
 
-If your desired package is not bower-ready and has not an auto-generated bower.json file, you can use the "overrides" parameter in your project's bower.json file to define the "main" production file for that package. (You can see some overrides samples I did in the bower.json file).
+If your desired package is not bower-ready and has not an auto-generated bower.json file, you can use the "overrides" parameter in your project's [bower.json](bower.json) file to define the "main" production file for that package. (You can see some overrides samples I did in the bower.json file).
 
 After you are finished installing the desired packages you will have a compiled bower.json file that you may use for other projects by just running the following command to install all the defined dependencies at once.
 
