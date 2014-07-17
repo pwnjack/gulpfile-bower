@@ -1,6 +1,6 @@
 # gulpfile-bower
 
-This is a gulp/bower working environment to develop a frontend website from scratch.
+This script helps you to start a front-end web project from scratch, it uses Bower to download packages and GulpJS to build and deploy everything for you.
 
 The author is @pwnjack
 
@@ -8,96 +8,79 @@ Dependencies: NodeJS, Bower, GulpJS
 
 Other dependencies: git CLI (for the first setup)
 
+## What it does
 
-## Get Started
+Once you started the script, all files will be copied from the /src folder to the /public folder and every file type will be treated differently before outputting in the /public folder.
 
-You need NodeJS installed, download it from their [official website](http://nodejs.org/).
+- All the main files of the defined Bower packages will be copied into their respective destination folders (css, js, fonts).
+- Less files will be compiled in plain CSS and automagically vendor-prefixed for old browsers
+- JS scripts will be merged in a single file called main.js
+- Images will be web-optimized
 
-Then install Gulp and Bower globally via NPM:
+## Getting started
 
-    sudo npm install gulp -g
+Clone this git on your Desktop
 
-    sudo npm install bower -g
-
-Then move to the desired folder and clone this Git and use it as a starting point for your project:
+    cd /Desktop
     
     git clone https://github.com/pwnjack/gulpfile-bower.git
+    
 
-    cd /gulpfile-bower
-
+Install dependencies
+    
     npm install
 
-This last command will lookup at the [package.json](/package.json) file and install all the needed gulp plugins defined in the first part of the [gulpfile](/gulpfile.js).
 
+Install the desired Bower packages (e.g.)
 
-## Setup
-
-At this point you have to choose what packages to install, based on what you need for your current project, you can do it using Bower like this (example):
-
-    bower install bootstrap
-
-    bower install magnific-popup
-
-If you want you can set them as dependencies in your bower.json file by adding the --save-dev option, so for you next similar projects, you can use this bower.json and instead run just:
-
-    bower install
-
-It will automatically install all the packages you previously added in your [bower.json](/bower.json) file.
-I added some sample libraries, of course feel free to add your own.
+    bower install bootstrap --save
+    
+The --save option is needed to save the package name in the bower.json file as a dependency for your project, this is needed to let the script work correctly.
 
 If your desired package is not bower-ready and has not an auto-generated bower.json file, you can use the "overrides" parameter in your project's bower.json file to define the "main" production file for that package. (You can see some overrides samples I did in the bower.json file).
 
-Well, now your environment is ready.
+After you are finished installing the desired packages you will have a compiled bower.json file that you may use for other projects by just running the following command to install all the defined dependencies at once.
 
-Don't worry you have to do this just the first time, for the next projects you could use the same template and skip this tedious "Setup" step.
+    bower install
+    
+At this point you just installed everything you need.
 
 
 ## Usage
 
-When you are done with the installation open the terminal, move to your project's folder and run:
+Now build everything up
 
-    gulp
-
-The program will iterate trough the gulpfile.js and run every defined task.
-
-It will:
-
-- Copy Bower Components' main files (js/css/img/fonts) to the production folder (/public/**).
-- Copy all files from the /src root folder, validate *.html files (throwing errors in the terminal), and push all files to the /public folder.
-- Compile your custom scripts/styles (less/js), concatenate, auto vendor-prefix, minimize, optimize images and push everything to production folder.
-- Start the watch task that will automatically update your production (/public) files whenever you do any change to a development (/src) file.
-
-So you can simply work on /src files and keep your project's /public/*.html open in your favorite browser to see the results.
-
-Done. Good coding!
+    gulp build
 
 
-## Errors
+Check if the /public folder has been created succesfully, if it's there, everything went fine, you are done. Every file should be there in their respective folder (js/css/font). The script will build and output both, a minimized file (suffixed with .min) and an un-minimized development version too.
 
-For now error handling is not in the scope of the project, so if you get one and the process hangs just run
+To start the watch task that will real-time update your compiled project at every file save just run:
 
     gulp watch
 
-This will re-run just the watch task.
-
-If you have an error of version mismatch from your gulp global install and the local one inside the project, simply run
-
-    sudo npm install gulp
-    
-It will update the local installation of gulp to the latest version.
-
-
-If you have any suggestion or optimization feel free to submit a pull request or open an issue, I like feedback.
+If an error occurs and the process hangs, re-run it.
 
 
 ## Commands
 
-This is a list of specific tasks you can use individually when needed.
+There are some useful commands for specific cases like:
 
     gulp clean
 
-This will delete completely the /public folder and all it's contents without asking for a confirm. Although it won't affect the /src folder, so after cleaning you can always re-run gulp to compile everything again, without loosing any change you did, except if you modified something directly in the public folder, but this is not supposed to happen, because as said, you should work only on the files inside your /src folder.
+Clears completely the compiled folder (/public)
 
-    gulp watch 
 
-When you have to get back to work on your project after you restarted your computer, or after the terminal throws an error, or for any other reason that may have interrupted the initial watch task, run it again with this command.
+    gulp
+
+For lazy people, after the installation part, run directly this command to build everything up and start the watch task immediately after the build process, so you can start to work on your project asap.
+
+
+    gulp libs
+    
+Copy just the Bower libraries to /public folder.
+
+
+## Workflow
+
+Always work on the /src folder, the script will automatically update the compiled counterpart (/pubic) at every file save. This way you can safely run 'gulp clean' and don't be worried of loosing anything, because the /src folder will remain untouched, and you can always compile it again.
