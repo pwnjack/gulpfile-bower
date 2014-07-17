@@ -38,7 +38,7 @@ Install dependencies
     npm install
 
 
-Install the desired Bower packages (e.g.)
+Install the desired Bower packages (e.g.) (You can view the package list [here](http://bower.io/search))
 
     bower install bootstrap --save
     
