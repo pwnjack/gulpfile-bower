@@ -19,7 +19,7 @@ Once you started the script, all files will be copied from the /src folder to th
 
 ## Getting started
 
-If you don't have it, install NodeJS [NodeJS](http://nodejs.org), then Gulp and Bower globally via npm:
+If you don't have it, install [NodeJS](http://nodejs.org), then Gulp and Bower globally via npm:
 
     sudo npm install gulp -g
     
