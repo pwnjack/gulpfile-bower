@@ -14,10 +14,7 @@ var gulp = require('gulp');
 // load plugins
 var $ = require('gulp-load-plugins')();
 
-// Define paths variables
-var srcPath = 'app';
-var destPath =  'dist';
-
+// compile less (for additional stylesheets use @import in style.less)
 gulp.task('styles', function () {
     return gulp.src('app/styles/style.less')
     	.pipe($.sourcemaps.init())
@@ -28,7 +25,7 @@ gulp.task('styles', function () {
         .pipe($.size());
 });
 
-// Compile scripts and push in a single minimized file inside /dist/js
+// compile scripts and push in a single minimized file inside /dist/js
 gulp.task('scripts', function() {
 	return gulp.src('app/scripts/**/*.js')
 	.pipe($.jshint())
@@ -36,7 +33,7 @@ gulp.task('scripts', function() {
     .pipe($.size());
 });
 
-// Build for production
+// build for production
 gulp.task('html', ['styles', 'scripts'], function () {
     var jsFilter = $.filter('**/*.js');
     var cssFilter = $.filter('**/*.css');
@@ -56,12 +53,12 @@ gulp.task('html', ['styles', 'scripts'], function () {
         .pipe($.size());
 });
 
-// Images optimization, if cached skip
+// images optimization, if cached skip
 gulp.task('images', function() {
   	return gulp.src('app/images/**/*')
   	.pipe($.newer('dist/img'))
     .pipe($.imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-    .pipe(gulp.dest(destPath + '/img'))
+    .pipe(gulp.dest('dist/img'))
     .pipe($.notify("Images task complete"))
 });
 
@@ -88,8 +85,8 @@ gulp.task('extras', function () {
 
 // clean /dist folder
 gulp.task('clean', function() {
-  	return gulp.src([destPath], {read: false})
-    .pipe($.clean());
+  	return gulp.src(['.tmp', 'dist'], {read: false})
+    .pipe($.rimraf());
 });
 
 // define build task that compiles everything but without starting the watch task
@@ -119,7 +116,7 @@ gulp.task('serve', ['connect', 'styles'], function () {
     require('opn')('http://localhost:9000');
 });
 
-// inject bower components
+// wire up bower components
 gulp.task('wiredep', function () {
     var wiredep = require('wiredep').stream;
 

@@ -1,1 +1,1 @@
-console.log('Welcome pwnjack!')
+console.log('Welcome pwnjack!');

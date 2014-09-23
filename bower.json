@@ -1,18 +1,10 @@
 {
   "name": "my-project",
-  "version": "0.1",
-  "ignore": [
-    "**/*.md",
-    "**/*.txt",
-    "bower_components",
-    "node_modules",
-    "src",
-    "gulpfile.js",
-    "*.json"
-  ],
+  "version": "0.0.1",
   "dependencies": {
-    "bootstrap": "~3.2.0",
-    "modernizr": "*"
+    "modernizr": "~2.6.2",
+    "jquery": "~1.11.0",
+    "bootstrap": "~3.2.0"
   },
   "overrides": {
     "modernizr": {

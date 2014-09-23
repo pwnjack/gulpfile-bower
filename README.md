@@ -90,4 +90,4 @@ Copy just the Bower libraries to /dist folder.
 
 ## Workflow
 
-Always work on the /app folder, the script will automatically update the compiled counterpart (/pubic) at every file save. This way you can safely run 'gulp clean' and don't be worried of loosing anything, because the /app folder will remain untouched, and you can always compile it again.
+Always work on the /app folder, the script will automatically update the compiled counterpart (/dist) at every file save. This way you can safely run 'gulp clean' and don't be worried of loosing anything, because the /app folder will remain untouched, and you can always compile it again.

@@ -1,9 +1,7 @@
-# Production folder
-public/
-
-# Components folders
 node_modules/
-bower_components/
+app/bower_components/
+dist/
+.tmp/
 
 # OSX files
 .DS_Store
