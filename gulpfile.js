@@ -74,7 +74,7 @@ gulp.task('fonts', function() {
 	}))
 	.pipe(fontFilter)
 	.pipe($.flatten())
-	.pipe(gulp.dest('app/fonts'))
+	.pipe(gulp.dest('dist/fonts'))
 	.pipe($.size());
 });
 
