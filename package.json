@@ -1,13 +1,14 @@
 {
   "name": "gulpfile-bower",
   "version": "0.0.2",
-  "repository" : {
-    "type" : "git",
-    "url" : "http://github.com/pwnjack/gulpfile-bower.git"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/pwnjack/gulpfile-bower.git"
   },
   "devDependencies": {
     "connect": "^2.14.4",
     "connect-livereload": "^0.4.0",
+    "del": "^0.1.3",
     "gulp": "^3.6.2",
     "gulp-autoprefixer": "0.0.7",
     "gulp-csso": "^0.2.9",
@@ -20,8 +21,6 @@
     "gulp-load-plugins": "^0.6.0",
     "gulp-newer": "~0.3.0",
     "gulp-notify": "~1.2.5",
-    "gulp-rename": "~1.2.0",
-    "gulp-rimraf": "^0.1.0",
     "gulp-size": "^1.1.0",
     "gulp-sourcemaps": "^1.2.2",
     "gulp-uglify": "~0.2.1",

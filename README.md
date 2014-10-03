@@ -60,7 +60,7 @@ Now build everything up
     gulp build
 
 
-Check if the /dist folder has been created succesfully, if it's there, everything went fine, you are done. Every file should be there in their respective folder (js/css/font). The script will build and output both, a minimized file (suffixed with .min) and an un-minimized development version too.
+Check if the /dist folder has been created succesfully, if it's there, everything went fine, you are done. Every file should be there in their respective folder (js/css/font). The script will build and output a minimized file containing everything.
 
 To start the watch task that will real-time update your compiled project at every file save just run:
 
@@ -83,9 +83,9 @@ Clears completely the compiled folder (/dist)
 For lazy people, after the installation part, run directly this command to build everything up and start the watch task immediately after the build process, so you can start to work on your project asap.
 
 
-    gulp libs
+    gulp build
     
-Copy just the Bower libraries to /dist folder.
+Builds up everything for production (/dist)
 
 
 ## Workflow

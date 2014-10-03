@@ -53,6 +53,12 @@ gulp.task('html', ['styles', 'scripts'], function () {
         .pipe($.size());
 });
 
+// html w3c validation
+gulp.task('validate', function () {
+    gulp.src('app/*.html')
+        .pipe($.w3cjs());
+});
+
 // images optimization, if cached skip
 gulp.task('images', function() {
   	return gulp.src('app/images/**/*')
@@ -85,8 +91,8 @@ gulp.task('extras', function () {
 
 // clean /dist folder
 gulp.task('clean', function() {
-  	return gulp.src(['.tmp', 'dist'], {read: false})
-    .pipe($.rimraf());
+    var del = require('del');
+    del(['.tmp', 'dist']);
 });
 
 // define build task that compiles everything but without starting the watch task
