@@ -1,3 +1,5 @@
+### This repo is deprecated, please look [here](http://github.com/pwnjack/primer) for future updates.
+
 # gulpfile-bower
 
 This script helps you to start a front-end web project from scratch, it uses Bower to download packages and GulpJS to build and deploy everything for you.
